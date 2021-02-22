@@ -44,5 +44,8 @@ QNAP install shell to J1900 or VM
      usb1: host=2-2,usb3=1
      vga: none
      vmgenid: b1ae84f1-5df5-4765-8464-4163370038b1
+     echo "nameserver 8.8.8.8" >> /etc/resolv.conf && rm /etc/apt/sources.list.d/pve-enterprise.list 
+     export LC_ALL=en_US.UTF-8 && apt update && apt -y install git 
+     git clone https://github.com/ivanhao/pvetools.git && cd pvetools && ./pvetools.sh
 
 
